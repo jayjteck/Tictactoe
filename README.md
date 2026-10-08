@@ -6,6 +6,12 @@
 
 ---
 
+## 🎮 游戏演示
+
+![实时对战演示](Screenshots/demo.gif)
+
+---
+
 ## ✨ 功能特性
 
 ### 核心玩法
@@ -109,3 +115,14 @@ Cell.OnCellSpriteUpdate         ← 更新该格子的贴图
 - 处理了**制胜一步的同步时序**:无论是否结束,本地落子都会先发给对方,保证对方能收到并弹出胜负面板。
 
 ---
+
+## 👤 作者
+
+- GitHub:[jayjteck](https://github.com/jayjteck)
+- 邮箱:299866@qq.com
+
+---
+
+## 📄 License
+
+MIT License
