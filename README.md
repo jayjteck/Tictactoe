@@ -6,19 +6,6 @@
 
 ---
 
-## 🎮 游戏演示
-
-<!-- 在这里插入游戏截图 / GIF,建议放置于 Screenshots/ 目录 -->
-
-| 主菜单 | 房间大厅 | 对局中 |
-|--------|----------|--------|
-| ![主菜单](Screenshots/main_menu.png) | ![房间大厅](Screenshots/lobby.png) | ![对局中](Screenshots/gameplay.png) |
-
-<!-- 推荐再放一个双端实时对战 GIF:
-![实时对战](Screenshots/demo.gif) -->
-
----
-
 ## ✨ 功能特性
 
 ### 核心玩法
@@ -28,15 +15,15 @@
 
 ### 联网功能(Photon PUN 2)
 - 连接 / 断开服务器,创建房间、加入房间、离开房间
-- 通过自定义事件 `RaiseEvent` 实现落子**可靠同步**(`SendReliable`)
+- 通过自定义事件 `RaiseEvent` 实现落子同步
 - 房间自定义属性同步"游戏开始"等状态,房主才能开始游戏
 - 玩家头像与昵称的实时同步(`CustomProperties`)
 - 掉线处理:对局中对方离开时自动退房
 
 ### 工程能力
-- 自研 **事件中心(EventCenter)**,逻辑与 UI 彻底解耦
+-  **事件中心(EventCenter)**,逻辑与 UI 彻底解耦
 - 通用 **单例框架**(`SingletonBase` / `SingletonAutoMono`)
-- 自研 **UI 面板框架**(`UIManager` + `BasePanel`,含淡入淡出)
+-  **UI 面板框架**(`UIManager` + `BasePanel`,含淡入淡出)
 - 玩家昵称 / 头像的 **JSON 本地存档**(`JsonUtility`)
 
 ---
@@ -57,16 +44,6 @@
 
 1. 使用 **Unity 2022.3 LTS** 及以上版本打开项目。
 2. 打开场景 `Assets/Scenes/Main.unity`,点击 Play。
-
-### 关于 Photon App ID
-
-项目使用 **Photon Cloud** 进行联网,`PhotonServerSettings.asset` 中已配置一个免费额度的 App ID,开箱即可联网测试。
-
-如需使用你自己的 App ID(例如要商用或测试额度用尽):
-
-1. 到 [Photon 官网](https://www.photonengine.com/) 注册并创建一个 PUN 应用;
-2. 在 Unity 中打开 `Window → Photon Unity Networking → PUN Wizard`,填入你的 App ID;
-3. 或直接修改 `Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset`。
 
 ---
 
@@ -132,24 +109,3 @@ Cell.OnCellSpriteUpdate         ← 更新该格子的贴图
 - 处理了**制胜一步的同步时序**:无论是否结束,本地落子都会先发给对方,保证对方能收到并弹出胜负面板。
 
 ---
-
-## 📝 待优化 / 可扩展方向
-
-- [ ] 加入房间列表与匹配(目前是输入房间名创建/加入)
-- [ ] 掉线重连机制(目前对局中掉线直接退房)
-- [ ] 断线后由服务器/房主仲裁胜负
-- [ ] 观战模式 / 回放(记录落子序列即可实现)
-- [ ] 迁移到 Photon Fusion(新一代网络方案)
-
----
-
-## 👤 作者
-
-- GitHub:[你的主页链接](https://github.com/你的用户名)
-- 邮箱:your@email.com
-
----
-
-## 📄 License
-
-MIT License(可自行调整)
