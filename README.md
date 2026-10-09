@@ -119,7 +119,7 @@ Cell.OnCellSpriteUpdate         ← 更新该格子的贴图
 ## 👤 作者
 
 - GitHub:[jayjteck](https://github.com/jayjteck)
-- 邮箱:299866@qq.com
+- 邮箱:2998667254@qq.com
 
 ---
 
